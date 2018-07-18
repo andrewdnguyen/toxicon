@@ -1,0 +1,75 @@
+<!--
+
+Trend / Report History Page
+
+Ideally, the user's data would show up on this page so they
+can review their past evaluations - has their toxicity gone down?
+They can evaluate this by looking at how much anger their text or
+audio submissions tend to make up their words, and if their quiz
+scores are especially low compared to the average. We would like
+to eventually use this page to store all information, unique to
+each user, which we started with the Google Sign In.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Tab title, main.css import -->
+    <title>Report History and Behavioral Trend</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <div id="nav">
+        <ul>
+            <div style="float: left;">
+                <li><a href="home.html"><button>Home</button></a></li>
+                <li><a href="resources.html"><button>Resources</button></a><li>
+            </div>
+            <div style="float: right;">
+                <li>
+                    <a href="profile.html">
+                        <img src="profile.png" width="40" height="auto" style="margin-top: 6px; margin-left: 5px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <button>Profile</button>
+                    </a>
+                </li>
+                <li><a href="index.html"><button style="margin-right: 7px;">Logout</button></a></li>
+            </div>
+        </ul>
+    </div>
+
+
+    <!-- Report History - where the use can click on a date and
+         see the results they got from that day. Great to compare
+         how their toxicity changes over time. Currently reroutes
+         to another page for results. -->
+    <div style="text-align: center;">
+        <br></br>
+        <h1>Report History</h1>
+        <ul id="reportList">
+        </ul>
+
+        <h2>Recent Results</h2>
+        <a href="results.html"><button>April 21st, 2018</button></a>
+        <br></br>
+
+    <!-- Set of navigation buttons. -->
+        <div>
+            <a href="resources.html"><button style="color: #2B8A97;">Get rid of your toxicity</button></a>
+            <a href="profile.html"><button>Return to Profile</button></a>
+            <a href="home.html"><button>Return to Home Page</button></a>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script type="application/javascript" src="js_files/quizQuestions.js"></script>
+</html>

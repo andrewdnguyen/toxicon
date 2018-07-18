@@ -1,0 +1,89 @@
+<!-- Document: home.html
+
+     Purpose: This is the main menu of the Toxicon website, which has the navigation bar.
+     This page shows options for the user to input text for toxicity, upload an audio file
+     for analyzing emotional factors of speech, and even take a quiz to assess the person
+     to correctly identify toxic phrases. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toxicon</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+        <link href="https://fonts.googleapis.com/css?family=Averia+Sans+Libre|Nunito" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+
+    <body>
+
+        <!-- Navigation bar -->
+        <div id="nav">
+            <ul>
+                <div style="float: left;">
+                    <li><a href="home.html"><button>Home</button></a></li>
+                    <li><a href="resources.html"><button>Resources</button></a><li>
+                </div>
+                <div style="float: right;">
+                    <li>
+                        <a href="profile.html">
+                            <img src="profile.png" width="40" height="auto" style="margin-top: 6px; margin-left: 5px;">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <button>Profile</button>
+                        </a>
+                    </li>
+                    <li><a href="index.html" onclick="signOut();"><button style="margin-right: 7px;">Logout</button></a></li>
+                </div>
+            </ul>
+        </div>
+
+        <!-- Body -->
+        <div style="text-align: center;" class="bodyText">
+            <br></br>
+            <h1>Welcome to Toxicon</h1>
+            <h2>Test your toxicity!</h2>
+            <div class="options">
+
+            <!-- This option navigates the user towards inputing messages that would be analyzed. -->
+                <div class="text_option">
+                    <p>Upload chat messages from  your game.</p>
+                    <a href="upload.html"><button>Upload Text</button></a>
+                </div>
+                <br></br>
+
+            <!-- This option navigates the user towards audio files with speech that would be analyzed. -->
+                <div class="audio_option">
+                    <p>Send audio of you talking while playing.</p>
+                    <a href="audio.html"><button>Send Audio</button></a>
+                </div>
+                <br><br>
+
+            <!-- This option navigates the user towards taking a self-assessing quiz. -->
+                <div class="quiz_option">
+                    <p>Start the quiz to determine your toxicity level relative to your responses.</p>
+                    <a href="quiz.html"><button>Start Quiz</button></a>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script type="application/javascript" src="js_files/login.js"></script>
+
+<!-- The following script attempts to navigate the user to the home screen.
+     Oddly enough, this does not manage to actually sign the user out of
+     their Google account completely. -->
+    <script>
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script type="application/javascript" src="js_files/quizQuestions.js"></script>-->
+</html>

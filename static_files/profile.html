@@ -1,0 +1,100 @@
+<!--
+
+Document: profile.html
+
+Purpose: This is the user's profile page used to store an user's profile information, such as name, in game
+usernames, and scores over time. The user should evaluate their toxicity using the text/audio
+options or taking a quiz, and the average and most recent should show up here. Unfortunately,
+this is all currently hard coded, though we finally have Google Sign In working, so hopefully we
+can store data for each person through Google.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Tab title, main.css import -->
+    <title>Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div id="nav">
+        <ul>
+            <div style="float: left;">
+                <li><a href="home.html"><button>Home</button></a></li>
+                <li><a href="resources.html"><button>Resources</button></a><li>
+            </div>
+            <div style="float: right;">
+                <li>
+                    <a href="profile.html">
+                        <img src="profile.png" width="40" height="auto" style="margin-top: 6px; margin-left: 5px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <button>Profile</button>
+                    </a>
+                </li>
+                <li><a href="index.html"><button style="margin-right: 7px;">Logout</button></a></li>
+            </div>
+        </ul>
+    </div>
+
+    <!-- Hardcoded profile information -->
+    <div style="text-align: center;">
+        <br></br>
+        <h1>My Profile</h1>
+        <h2>Noxious Nate</h2>
+        <ul>
+            <li><b>Toxiscore</b>: 89.3 (89th percentile)</li>
+            <li><b>Previous Toxiscore</b>: 95.0</li>
+            <li><b>Sensitivit</b>y: 3.2 (16th percentile)</li>
+            <li><b>Previous Sensitivity</b>: 3.6</li>
+            <li><b>IGN</b>: NoxNate (LoL), NephariousNate (Fortnite)</li>
+        </ul>
+
+        <!-- Non-functional form to change profile elements.
+        <button onclick="edit()">Edit</button>
+        <form id="profileEdit">
+            <p class="editProfile">First name:</p>
+            <input type="text" name="firstname" value="Noxious">
+            <p class="editProfile">Last name:</p>
+            <input type="text" name="lastname" value="Nate">
+            <p class="editProfile">League of Legends IGN:</p>
+            <input type="text" name="ignLol" value="NoxNate">
+            <p class="editProfile">Fortnite IGN:</p>
+            <input type="text" name="ignFortnite" value="NephariousNate">
+            <p class="editProfile">Overwatch IGN:</p>
+            <input type="text" name="ignOW" value="">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        -->
+        <!-- Report for History and Behavioral Trend
+             Currently hardcoded -->
+        <br><br>
+        <a href="trend.html"><button>History and Behavioral Trend Report</button></a>
+        <br><br>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="application/javascript" src="js_files/quizQuestions.js"></script>
+<script>
+    /*Shows/hides profile form once you click on the edit button.*/
+    function edit() {
+        var profileForm = document.getElementById("profileEdit");
+        if (profileForm.style.display === "none") {
+            profileForm.style.display = "block";
+        } else {
+            profileForm.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

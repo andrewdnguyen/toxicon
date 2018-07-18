@@ -1,0 +1,94 @@
+<!--Document: quiz.html
+
+    Purpose: This web page serves as the third key element to the Toxicon website as it
+             allows the user to take a short, 10 question quiz. This quiz assesses
+             how well the user can identify harmful in-game phrases from non-harmful
+             ones. After the quiz, the user will be shown the amount of answers correct
+             and that user can choose to view their responses as well as their data
+             visualization of their performance against the average scores of others
+             that have taken the quiz (the average score shown is arbitrarily hard-coded).
+ -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+        <link href="https://fonts.googleapis.com/css?family=Averia+Sans+Libre|Nunito" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <!-- Navigation bar -->
+        <div id="nav">
+            <ul>
+                <div style="float: left;">
+                  <li><a href="home.html"><button>Home</button></a></li>
+                  <li><a href="resources.html"><button>Resources</button></a><li>
+                </div>
+                <div style="float: right;">
+                    <li>
+                        <a href="profile.html">
+                            <img src="profile.png" width="40" height="auto" style="margin-top: 6px; margin-left: 5px;">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <button>Profile</button>
+                        </a>
+                    </li>
+                    <li><a href="index.html"><button style="margin-right: 7px;">Logout</button></a></li>
+                </div>
+            </ul>
+        </div>
+
+        <!-- Body -->
+        <div style="text-align: center;" class="bodyText">
+            <br></br>
+            <h1>Toxicity Quiz</h1>
+            <h2>Compare yourself to other players of the toxic behavioral scale.</h2>
+
+        <!-- Data Visualization of User's Quiz Score -->
+            <div id="graph"></div>
+
+        <!-- Text derived from database.js backend in order to show quotes and
+             relevant topic information in a randomized order. -->
+            <p class="quoteNum"></p>
+            <p class="quizQs"></p>
+            <p class="topic"></p>
+            <p class="quote"></p>
+
+        <!-- Answer options in the form of radio buttons. -->
+            <div class="answer">
+              <form action="">
+                <input type="radio" name="answer" id="badmouth"> <div class="choice">BadMouthing</div>
+                <input type="radio" name="answer" id="banter"> <div class="choice">NOT BadMouthing</div>
+              </form>
+            </div>
+
+        <!-- A counter recording the number of correct responses. -->
+            <div class="counter"></div>
+
+        <!-- Button that initiates and/or ends the quiz prematurely. -->
+            <button class="quizButton">Click to start the quiz!</button>
+
+        <!-- Proceeds user to the following quiz question. -->
+            <button class="nextQ">Next Quote</button>
+
+        <!-- Shows user their recorded responses and determination of those responses. -->
+            <button class="showResp">Show Responses</button>
+
+            <br>
+            <a href="home.html"><button>Return to Home Page</button></a>
+            <br>
+            <div id="responses"></div>
+        </div>
+
+    </body>
+    <script src="js_files/jquery-3.3.1.js"></script>
+    <script type="application/javascript" src="js_files/quizQuestions.js"></script>
+
+<!-- Script for Plotly.js data visualization. -->
+    <script src="js_files/plotly.js" charset="utf-8"></script>
+</html>

@@ -1,0 +1,304 @@
+/*Style sheet for every page.
+Used to improve visuals, visibility, and usability.
+Please minimize in-line styling and keep things to this sheet.*/
+
+/*FiraSans, more versions in the fonts folder (bold, etc.)*/
+@font-face {
+	font-family: "FiraSans-Regular";
+	src: url("fonts/FiraSans-Regular.otf");
+}
+
+/*Don't delete - keeps things stretched to edges of browser, text white.*/
+html, body {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/*Color of body and sizing.*/
+body {
+    height: 100%;
+    background: #202020;
+    background-size: 3000%;
+}
+
+/*Assigning font size AND color to headers.*/
+h1 {
+    font-family: FiraSans-Regular;
+    color: #48B0A3;
+}
+
+/*Assigning font size to general text.*/
+form, #topic, div, h2, p, input, input[type="checkbox"], label {
+    font-family: FiraSans-Regular;
+}
+
+/*Specifically set weight and color for secondary header.*/
+h2 {
+    font-weight: bolder;
+    color: #77D282;
+}
+
+/*Custom, clear input section.*/
+input {
+    background-color: transparent;
+    border-color: 1em solid white;
+    color: white;
+    margin-top: 0.5em;
+}
+
+/*Change in background color when hovering over input.*/
+input:hover{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/*Change in background color when focusing on input.*/
+input:focus {
+    background-color: rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+/*Change in background color when checking off input.*/
+input[type=checkbox] {
+    background: transparent;
+    transform: scale(1.5);
+}
+
+/*Change margin when checking off or for label.*/
+input[type=checkbox], label {
+    margin: 1em 0em 1em 0.25em;
+}
+
+/*Set different font size and border radius for inputs/labels/most text*/
+p, input, label {
+    font-size: 1.25em;
+    border-radius: 0.25em;
+}
+
+/*Customized style for all buttons and file/submit inputs*/
+button, input[type="file"], input[type="submit"]{
+    margin: 0.5em 0em 0.5em 0.5em;
+    padding: 0.5em, 1.75em;
+    font-family: FiraSans-Regular;
+    font-size: 1.5em;
+    background-color: rgba(0,0,0,.25);
+    color: white;
+    border-color: transparent;
+    border-radius: 0.25em;
+}
+
+/*Change background color upon button hover.*/
+button:hover {
+    background-color: rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+/*Change opacity when button is enabled.*/
+button:enabled{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*Lower opacity to make it look disabled.*/
+button:disabled{
+    opacity: 0.5;
+    cursor: default;
+}
+
+/*Custom for home.html for things to do.*/
+.options{
+    display: inline-block;
+    color: black;
+    text-align: center;
+}
+
+/*Custom styling for text option on home page.*/
+.text_option {
+	background-color: #2B8A97;
+	border-radius: 5px;
+    padding: 10px;
+}
+
+/*Custom styling for audio option on home page.*/
+.audio_option {
+	background-color: #77D282;
+	border-radius: 5px;
+    padding: 10px;
+}
+
+/*Custom styling for quiz option on home page.*/
+.quiz_option {
+	background-color: #CDF26F;
+	border-radius: 5px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*Custom styling for edit form on the Profile page.*/
+.editProfile{
+    margin: 0.5em 0em 0.25em 0em;
+    font-size: 1em;
+    font-style: italic;
+}
+
+/*Styling for the navbar (both ul and li).*/
+ul{
+    margin-left: -2.5em;
+}
+li{
+    list-style-type: none;
+    font-family: FiraSans-Regular;
+    font-size: 1.25em;
+}
+
+
+/*Only relevant to upload.html.*/
+.data, .key{
+    font-family: FiraSans-Regular;
+}
+
+/*Styling for the profile.*/
+#profileEdit {
+	display: none;
+}
+
+/*General center class to be used anywhere.*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Styling for landing page description.*/
+#description {
+	width: 800px;
+	margin:0 auto;
+	color: #CDF26F;
+}
+
+/*More nav bar nudging.*/
+#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+	background-color: #443F56;
+}
+
+#nav ul {
+	display: inline-block;
+	position: fixed;
+	list-style: none;
+	top: 0;
+	width: 100%;
+	margin: 0px;
+	padding: 0;
+	font-size: 8pt;
+	background-color: #443F56;
+}
+
+#nav li {
+	float: left;
+}
+
+#nav li a {
+	display: block;
+	font-weight: bold;
+}
+
+#nav li a:hover {
+	color: #c00;
+}
+
+/*Helps chosen divs (like for nav bar or options on home page) have standard margins.*/
+.indented {
+	margin-left: 5%
+	margin-right: 5%;
+}
+
+/*Applies to body margins on general text for quiz.html.*/
+.bodyText{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*Applies to the graph element in quiz.html.*/
+#graph{
+	width: 100%;
+	height: 50%;
+	text-align: center;
+}
+
+/*The following applies to the radio buttons and text on quiz.html.*/
+.answer{
+	vertical-align: center;
+}
+
+/*Change size of radio input on quiz.*/
+input[type="radio"]{
+	width: 1.1em;
+	height: 1.1em;
+}
+
+/*Increase size of quiz choices for visibility.*/
+.choice{
+	font-size: 30px;
+}
+
+/*Custom styling for quiz graph.*/
+#graph{
+	width: 600px;
+	height: auto;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+/*Applies to both the Sign-In and Google Sign-In buttons shown in index.html.*/
+#signIn{
+	display: inline-block;
+}
+
+/*More Google Sign in styling.*/
+.g-signin2{
+	margin-left: 32.5%;
+	margin-right: 32.5%;
+	font-size: 8px;
+}
+
+/*Used for upload.html text input.*/
+#typeTextBox{
+	overflow: auto;
+	width: 80%;
+	height: 300px;
+	font-family: FiraSans-Regular;
+	font-size: 24px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.25);
+	resize: none;
+}
+
+/*Increase quiz quotes for usability/visibility.*/
+p.quote{
+	font-size: 36px;
+}
+
+/*This shifts the margin top of general body text when the
+  width of the screen is at most 437 px.*/
+@media screen and (max-width: 425px) {
+	.bodyText{
+		margin-top: 20%;
+	}
+}
+
+@media screen and (max-width: 240px) {
+	.bodyText{
+		margin-top: 35%;
+	}
+}
+
+@media screen and (max-width: 211px) {
+	.bodyText{
+		margin-top: 90%;
+	}
+}
